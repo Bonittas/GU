@@ -320,166 +320,75 @@ Search
    </div>
   
 
-   <div className="container mx-auto ">
-  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-4 ">
+   <div className="container mx-auto">
+  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-4">
     {places.map((image) => (
-      <div className="w-full h-full relative mx-4 border-2" key={image.url} >
+      <div className="w-full h-full relative border-2" key={image.url}>
         <div className="h-64 relative">
           <img
             src={image.url}
             alt={image.Name}
             className="absolute w-full h-full object-cover rounded-t-md"
-            style={{ minWidth: "100%", minHeight: "100%" }}
           />
-         <button className={`absolute bottom-56 left-4 z-10 px-2 top-4 rounded-md text-sm h-8 w-20 text-white ${image.availability === 'OPEN' ? 'bg-green-400' : 'bg-blue-600'}`}>
-  {image.availability}
-</button>
+          <button className={`absolute bottom-56 left-4 z-10 px-2 top-4 rounded-md text-sm h-8 w-20 text-white ${image.availability === 'OPEN' ? 'bg-green-400' : 'bg-blue-600'}`}>
+            {image.availability}
+          </button>
           {image.Feature && (
-    <button className="absolute bottom-56 left-24 top-4 z-10 px-4 ml-4 rounded-md text-sm bg-pink-700 h-8 w-24 text-white">
-      {image.Feature}
+            <button className="absolute bottom-56 left-24 top-4 z-10 px-4 ml-4 rounded-md text-sm bg-pink-700 h-8 w-24 text-white">
+              {image.Feature}
             </button>
           )}
-          <div className="relative z-20 h-16 w-16">
-  <img
-    className="rounded-full h-full w-full object-cover absolute top-64 left-72 top-50% left-50% transform -translate-x-1/2 -translate-y-1/2 border-4 border-white"
-    src={image.profile}
-    alt="description Image"
-  />
-</div>
-         <div className="flex items-center relative top-32 mx-4 ">
-  <button className="relative  h-12 w-14 rounded-md z-10 px-4 text-sm bg-green-600 text-white font-bold">
-    {image.Rate}
-  </button>
-  <div className="w-1/5 text-orange-500 z-10 flex bottom-3 left-8 justify-end relative ">
-    <FontAwesomeIcon icon={faStar} />
-    <FontAwesomeIcon icon={faStar} />
-    <FontAwesomeIcon icon={faStar} />
-    <FontAwesomeIcon icon={faStar} />
-    <FontAwesomeIcon icon={faStar} />
-  </div>
-  <div className="text-center  relative text-sm top-3 right-12 text-white whitespace-nowrap z-10">
-            {image.review} Reviews
+          <div className="relative z-20 h-16 w-16" style={{ left: '50%', transform: 'translateX(-50%)' }}>
+            <img
+              className="rounded-full h-full w-full object-cover left-32 absolute top-64 top-50% transform -translate-y-1/2 border-4 border-white"
+              src={image.profile}
+              alt="description Image"
+            />
           </div>
-</div>
-          
+          <div className="flex items-center relative top-32 mx-4 ">
+            <button className="relative  h-12 w-14 rounded-md z-10 px-4 text-sm bg-green-600 text-white font-bold">
+              {image.Rate}
+            </button>
+            <div className="w-1/5 text-orange-500 z-10 flex bottom-3 left-8 justify-end relative ">
+              <FontAwesomeIcon icon={faStar} />
+              <FontAwesomeIcon icon={faStar} />
+              <FontAwesomeIcon icon={faStar} />
+              <FontAwesomeIcon icon={faStar} />
+              <FontAwesomeIcon icon={faStar} />
+            </div>
+            <div className="text-center  relative text-sm top-3 right-12 text-white whitespace-nowrap z-10">
+              {image.review} Reviews
+            </div>
+          </div>
         </div>
         <div className="bg-white relative mx-8 ">
-        <div className="text-left h-16   relative  font-bold pt-5 whitespace-nowrap">
+          <div className="text-left h-16   relative  font-bold pt-5 whitespace-nowrap">
             {image.Name}
           </div>
           <div className="flex items-center justify-between  ">
-          <div className='text-pink-700 whitespace-nowrap relative mr-2 text-xl'><FontAwesomeIcon icon={faLocationDot}/></div>
-          <div className="text-center h-16 text-gray-600 relative pr-56  py-5 whitespace-nowrap">
-            {image.Location}</div></div>
+            <div className='text-pink-700 whitespace-nowrap relative mr-2 text-xl'>
+              <FontAwesomeIcon icon={faLocationDot}/>
+            </div>
+            <div className="text-center h-16 text-gray-600 relative pr-56  py-5 whitespace-nowrap">
+              {image.Location}
+            </div>
+          </div>
           <div className="relative  px-5 text-md  text-gray-600 z-10">
             {image.description}
           </div>
-
         </div>
         <div className='border-t-2 border-gray-300 relative top-10 rounded-b-md border-dashed'>
-         
-         <div className="text-center h-16 rounded-b-md relative pr-56 font-bold text-gray-500 pt-5 text-black whitespace-nowrap">
-           {image.category}
-         </div>
-         <div className='whitespace-nowrap flex'>
-         <div className='relative left-56 mr-4  rounded-full bottom-12  w-12 h-12 border-2 p-3 text-center text-gray-400'><FontAwesomeIcon icon={faEnvelope}/></div>
-         <div className='relative left-56  whitespace-nowrap rounded-full bottom-12  w-12 h-12 border-2 p-3 text-center text-gray-400'><FontAwesomeIcon icon={faHeart}/>
-        </div>
-        </div>
+          <div className="text-center h-16 rounded-b-md relative pr-56 font-bold text-gray-500 pt-5 text-black whitespace-nowrap">
+            {image.category}
           </div>
-      </div>
-      
-    ))}
-  </div>
-  
-</div>
-      
-<div className="container mx-auto my-20">
-      <h2 className=" flex items-center justify-center text-lg text-gray-700 ">Our Partners</h2>
-  <div className="flex items-center justify-center">
-  
-    <h2 className="text-4xl font-bold mr-2 text-gray-700">We Have Worked with</h2>
-    <h2 className="text-4xl font-bold text-pink-600">10,000+</h2>
-  </div>
-        <p className="text-4xl font-medium mb-12 text-gray-700 flex items-center justify-center">Trusted Companies</p>
-        <div className="container mx-auto">
-        <div className="relative grid  grid-cols-6  gap-6 m-2">
-          {companies.slice(0, 6).map((image, index) => (
-            <div className="col-span-1 p-2" key={index}>
-              <img
-                src={image.url}
-                className="w-full object-fit-cover rounded-t-md h-16"
-              />
+          <div className='relative  flex  '>
+            <div className='relative left-64 mr-4  rounded-full bottom-12  w-12 h-12 border-2 p-3 text-center text-gray-400'>
+              <FontAwesomeIcon icon={faEnvelope}/>
             </div>
-          ))}
-        </div>
-        <div className="grid grid-cols-2 gap-2 mt-4">
-          <div className="col-start-2 col-span-1 p-2">
-            <img
-              src={companies[6].url}
-              className="w-full object-fit-cover rounded-t-md"
-            />
-          </div>
-          <div className="col-start-3 col-span-1 p-2">
-            <img
-              src={companies[7].url}
-              className="w-full object-fit-cover rounded-t-md"
-            />
-          </div>
-          <div className="col-start-4 col-span-1 p-2">
-            <img
-              src={companies[8].url}
-              className="w-full object-fit-cover rounded-t-md"
-            />
-          </div>
-          <div className="col-start-5 col-span-1 p-2">
-            <img
-              src={companies[9].url}
-              className="w-full object-fit-cover rounded-t-md"
-            />
-          </div>
-        </div>
-      </div>
-      </div>
-
-
-
-        <div className="container mx-auto relative m-4">
-  <div className="flex flex-wrap relative ml-24 right-4">
-    {images.map((image) => (
-      <div className="w-1/3  sm:w-full md:w-1/2  lg:w-1/3 p-2 gap-2 " key={image.url}>
-        <div className="h-60 relative">
-          <img
-            src={image.url}
-            alt={image.description}
-            className="w-full h-full object-fit-cover rounded-t-md"
-          />
-          </div>
-          <div className="bg-white border-2 mb-10 rounded-b-md text-left relative pl-6">
-            <div className='   relative rounded-md p-2 border-2 border-pink-200 w-32 h-10 my-4 bg-pink-200 '>
-            <div className="text-center   font-bold text-md relative   text-red-600 ">
-              {image.catagory}
-            </div></div>
-            <div className="text-center relative right-16 font-bold  whitespace-nowrap">
-              {image.qtn}
+            <div className='relative left-64 whitespace-nowrap rounded-full bottom-12  w-12 h-12 border-2 p-3 text-center text-gray-400'>
+              <FontAwesomeIcon icon={faHeart}/>
             </div>
-            <div className=" h-16 rounded-b-md relative text-gray-500 font-bold pt-5">
-              {image.description}
-            </div>
-            <div className='line-2 line-black whitespace-nowrap flex relative  bottom-0 '>
-            <img
-    className="rounded-full  h-16 w-16 object-cover absolute  top-20 mt-2 left-12 left-50% transform -translate-x-1/2 -translate-y-1/2 border-4 border-white z-20"
-    src={image.profile}
-    alt="description Image"
-  />
-  </div>
-  <div className="text-center h-16 rounded-b-md  top-20 p-1 relative font-bold  justify-center flex ">
-  <div className='text-green-500 relative m-3 bottom-3'><FontAwesomeIcon icon={faEye}/> </div> {image.view} views
-            </div>
-            <div className="text-center h-16 rounded-b-md relative justify-end flex font-bold p-5">
-            <div className='text-yellow-500 relative  m-3 bottom-3'>  <FontAwesomeIcon icon={faClock}/>  </div> {image.date}
-            </div>
-           
+          </div>
         </div>
       </div>
     ))}
@@ -719,7 +628,7 @@ Search
  
  
 <div className="bg-green-900 relative h-100">
-  <img src="/images/landing-bg.png" alt="landing" className="absolute h-100 bg-pink-700 w-full h-full object-cover z-20" />
+  <img src="/images/landing-bg.png" alt="landing" className="absolute h-100 bg-green-900 w-full h-full object-cover z-20" />
 
   <div className="container py-3 relative mt-10 z-20">
     <div className="row justify-center">
@@ -731,27 +640,24 @@ Search
       </div>
     </div>
 
-    <div className="row items-center justify-center relative mt-16 mb-24">
-      <div className="col-xl-7 col-lg-10 col-md-12 col-sm-12 col-12">
-        <form className="bg-white rounded-md p-1">
-          <div className="row no-gutters">
-            <div className="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
-              <div className="form-group my-5">
-                <input type="text" className="form-control border-0 text-black m-2 w-full" placeholder="Enter Your Email Address" />
-              </div>
-            </div>
-            <div className="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
-              <button className="w-full bg-gray-600 h-16 text-white font-bold py-2 px-4 rounded-md" type="button">
-                <span className="hidden sm:inline-block">Search</span>
-                <div className='text-white-500'><FontAwesomeIcon icon={faMagnifyingGlass } /></div>
-              </button>
-            </div>
+    <div className="row items-center justify-center relative mt-16 mb-24 rowjustify-center">
+      <div className="xl:col-7 col-lg-10 col-md-12 col-sm-12 col-12">
+        <form className="bg-white rounded-md p-1 w-1/2 relative mx-auto flex justify-between">
+          <div className="w-full sm:w-3/4">
+            <input type="text" className="w-full text-white py-6 px-2" placeholder="Enter Your Email Address" />
+          </div>
+          <div className="w-full sm:w-1/4 items-right relative top-20 m-5 left-2">
+            <button className="bg-pink-600 h-20 w-32 bottom-12 m-2 text-white font-bold py-2 px-4 rounded-md absolute left-16" type="button">
+              Search
+              <div className='text-white-500'><FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+            </button>
           </div>
         </form>
       </div>
     </div>
   </div>
 </div>
+
       <section className="space">
   <div className="container">
     <div className="flex flex-col lg:flex-row items-center justify-between">
