@@ -658,26 +658,26 @@ Search
   </div>
 </div>
 
-      <section className="space">
+<section className="space">
   <div className="container">
     <div className="flex flex-col lg:flex-row items-center justify-between">
       
       <div className="lg:w-1/2">
         <div className="m-spaced">
-          <div className="relative ">
-            <div className="mb-5 lg:hidden">
+          <div className="relative left-16 mr-16">
+            <div className="mb-5 hidden lg:block ">
               <span className="bg-pink-100 border-1 text-sky px-2 py-2 relative rounded-md text-xl text-pink-600 ">Download Apps</span>
             </div>
-            <h2 className="font-bold text-4xl mb-3 lg:hidden ">
+            <h2 className="font-bold text-4xl mb-3 ">
               Download the Goodup App&amp; <br />For Easy Use
             </h2>
             
-            <p className="mb-4 text-xl text-green-800 sm:hidden">
+            <p className="mb-4 text-xl text-green-800 hidden lg:block">
               At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
             </p>
             
-            <div className="lg:hidden">
-              {/* Show the counters only on screens smaller than lg */}
+            <div className="hidden lg:block">
+              {/* Show the counters only on screens larger than lg */}
               <div className="flex flex-row justify-between mb-4">
                 <div className="w-1/3 text-center">
                   <h3 className="font-bold text-sky mb-0">
@@ -701,30 +701,6 @@ Search
             </div>
           </div>
           
-          <div className="hidden lg:block">
-            {/* Show the counters only on screens larger than lg */}
-            <div className="flex flex-row justify-between mb-4">
-              <div className="w-1/3 text-center">
-                <h3 className="font-bold text-sky mb-0">
-                  <span className="font-bold text-4xl count text-pink-600">10k+</span>
-                </h3>
-                <p className="font-medium">Active Jobs</p>
-              </div>
-              <div className="w-1/3 text-center">
-                <h3 className="font-bold text-warning mb-0">
-                  <span className="count text-pink-600 text-4xl">12k+</span>
-                </h3>
-                <p className="font-bold">Resumes</p>
-              </div>
-              <div className="w-1/3 text-center">
-                <h3 className="font-bold text-danger mb-0">
-                  <span className="count font-bold text-pink-700 text-4xl">7k+</span>
-                </h3>
-                <p className="font-medium">Employers</p>
-              </div>
-            </div>
-          </div>
-          
         </div>
       </div>
       
@@ -737,6 +713,8 @@ Search
     </div>
   </div>
 </section>
+
+
 
   </>
   );
