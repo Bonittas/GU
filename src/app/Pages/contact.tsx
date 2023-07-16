@@ -82,7 +82,7 @@ const { address, contacts } = contactInfo;
     <div className='bg-gray-100'>
   <header className="bg-gray-900 relative h-16">
     <div className="container mx-auto px-4 flex justify-left items-center h-full">
-      <nav className="hidden md:flex space-x-4 justify-end">
+      <nav className="flex space-x-4">
         <Link href="/" passHref legacyBehavior>
           <a
             className={`text-white hover:text-gray-300 ${activeLink === '/' ? 'text-red-500' : ''}`}
