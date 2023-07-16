@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { faB,faBasketball,faStar,faEye, faPenRuler,faPlane,faLocationDot,faWineGlass,faScrewdriver,faCar,faBookOpen,faBuilding ,faS, faStethoscope, faBasketShopping, faUtensils, faHouseChimneyCrack, faMagnifyingGlass, faHeart, faMessage, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -251,43 +252,57 @@ const places = [
 ];
 
 function HomeScreen2() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [location, setLocation] = useState('');
-  const [category, setCategory] = useState('');
-
-  const handleSearch = () => {
-    // TODO: Implement search logic
-  };
+    const [searchTerm, setSearchTerm] = useState('');
+    const [location, setLocation] = useState('');
+    const [category, setCategory] = useState('');
   
+    const handleSearch = () => {
+      // TODO: Implement search logic
+    };
 
-  return (
-    <>
-   <div className="flex items-center justify-center bg-pink"> 
-   <div className="w-full relative"> 
-   <div className="absolute inset-0"> 
-   <img src="/images/banner-1.jpg" alt="banner" className="absolute inset-0 w-full h-full object-cover" /> 
-   <div className="absolute inset-0 bg-black opacity-40"></div> </div>
-
+    return (
+        <>
+      <div className="flex items-center justify-center bg-pink"> 
+  <div className="w-full relative"> 
+    <div className="absolute inset-0"> 
+      <img src="/images/banner-1.jpg" alt="banner" className="absolute inset-0 w-full h-full object-cover" /> 
+      <div className="absolute inset-0 bg-black opacity-40"></div>
+    </div>
     <div className="text-center text-white relative z-10 mt-64 ">
       <h1 className="text-6xl font-bold mb-2 ml-2 font-custom">Explore Great Place in Your Town</h1>
-      <p className="text-md font-medium mb-32">Explore wonderful place to stay, salon, shoping, massage or visit local areas.</p>
-      
-      <form className="flex flex-wrap justify-center h-60 relative  rounded-md">
-      <div className='text-black bg-white h-20  relative top-0 rounded-l-md' ><p className=' relative top-6 font-bold left-4 pr-4 text-xl text-10'>Find</p></div> 
-        <div className=" rounded-md  w-full sm:w-1/3 lg:w-1/3    text-black ">
-          <input type="text-gray " className="  py-2 px-6 h-20 w-full "  placeholder="Nail salons, plumbers, takeout..." />
-        </div>
-        <div className='text-black bg-white h-20  relative top-0 border-l-2' ><p className=' relative top-6 font-bold text-xl pl-4'>Where</p></div> 
-        <div className="w-full sm:w-1/3 lg:w-1/3  text-black">
-          <input type="text"  className="w-full  py-2 px-3 h-20 text-black" placeholder="San Francisco, CA " />
-        </div>
-       
-        <div className="w-full sm:w-48  ">
-        <button className="w-full bg-pink-600 h-20 text-white font-bold py-2 px-4 rounded-md" type="button">
-Search
+      <p className="text-md font-medium mb-32">Explore wonderful place to stay, salon, shopping, massage or visit local areas.</p>
+      <form className="flex flex-wrap justify-center h-60 relative rounded-md">
+        <div className="w-full sm:w-1/2 lg:w-1/3">
+          <div className="flex items-center text-black bg-white h-20 rounded-l-md">
+            <p className="relative  font-bold left-4 pr-4 text-xl ">Find</p>
+            <div className="w-full sm:w-full">
+              <input type="text-gray " className="py-2 px-6 h-20 w-full border-r-2 border-gray-200" placeholder="Nail salons, plumbers, takeout..." />
+            </div>
+          </div> 
+        </div> 
+        <div className="w-full sm:w-1/3 lg:w-1/3 mt-4 sm:mt-0">
+          <div className="flex items-center  bg-white h-20 rounded-r-md">
+            <p className="relative  font-bold ml-3 text-xl text-black">Where</p>
+            <div className="w-full sm:w-full">
+              <input type="text" className="py-2 px-3 h-20 w-full" placeholder="San Francisco, CA" />
+            </div>
+            </div>
+            <div className="w-full mt-4 flex justify-end">
+          <button className="w-1/8 relative  left-32 bottom-24   bg-pink-600 h-20 text-white font-bold py-2 px-10 rounded-r-md" type="button">
+            Search
+            <div className='text-white-500 text-xl'><FontAwesomeIcon icon={faMagnifyingGlass } /></div> 
+          </button> 
+        </div> 
+          
+        </div> 
+ 
+      </form>
+    </div> 
+  </div> 
+</div>
+     <div  className='bg-gray-100'>
 
-<div className='text-white-500'><FontAwesomeIcon icon={faMagnifyingGlass } /></div> </button> </div> </form> </div> </div> </div>
-<div className='bg-gray-100 relative bottom-10 '>
+     <div className='bg-gray-100 relative bottom-10 '>
   <div className="container mx-auto relative my-14 top-5">
     <div className="row">
       <div className="col-xl-12 col-lg-12 col-md-12 col-12 mt-10 mb-16">
@@ -299,10 +314,10 @@ Search
     </div>
   </div>
   <div className="container mx-auto ">
-  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-10">
+  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-6 gap-5">
     {TopCategories.map((category) => (
       <div className="flex flex-col items-center justify-center w-full h-64 relative rounded-md bg-white p-4 mb-4" >
-        <button className="relative bottom-4 right-16 m-5 rounded-md hover:bg-green-700 hover:text-white text-sm text-green-700 bg-green-100 h-8 w-1/3">
+        <button className="relative bottom-4 right-16 m-6  rounded-md hover:bg-green-700 hover:text-white text-sm text-green-700 bg-green-100 h-8 w-16">
           {category.cities}
         </button>
         <div className="">
@@ -316,14 +331,14 @@ Search
     ))}
   </div>
 </div>
-   
-   </div>
-  
+</div>
 
-   <div className="container mx-auto">
-  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-4">
+
+
+<div className="container mx-auto ">
+  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-4 ">
     {places.map((image) => (
-      <div className="w-full h-full relative border-2" key={image.url}>
+      <div className="w-full h-full  relative border-2 mb-10" key={image.url}>
         <div className="h-64 relative">
           <img
             src={image.url}
@@ -340,7 +355,7 @@ Search
           )}
           <div className="relative z-20 h-16 w-16" style={{ left: '50%', transform: 'translateX(-50%)' }}>
             <img
-              className="rounded-full h-full w-full object-cover left-32 absolute top-64 top-50% transform -translate-y-1/2 border-4 border-white"
+              className="rounded-full h-full w-full object-cover left-24 absolute top-64 top-50% transform -translate-y-1/2 border-4 border-white"
               src={image.profile}
               alt="description Image"
             />
@@ -349,46 +364,143 @@ Search
             <button className="relative  h-12 w-14 rounded-md z-10 px-4 text-sm bg-green-600 text-white font-bold">
               {image.Rate}
             </button>
-            <div className="w-1/5 text-orange-500 z-10 flex bottom-3 left-8 justify-end relative ">
+            <div className="w-1/5 text-orange-500 z-10 flex bottom-3 left-10 justify-end relative ">
               <FontAwesomeIcon icon={faStar} />
               <FontAwesomeIcon icon={faStar} />
               <FontAwesomeIcon icon={faStar} />
               <FontAwesomeIcon icon={faStar} />
               <FontAwesomeIcon icon={faStar} />
             </div>
-            <div className="text-center  relative text-sm top-3 right-12 text-white whitespace-nowrap z-10">
+            <div className="text-center  relative text-sm top-3 right-10 text-white whitespace-nowrap z-10">
               {image.review} Reviews
             </div>
           </div>
         </div>
-        <div className="bg-white relative mx-8 ">
-          <div className="text-left h-16   relative  font-bold pt-5 whitespace-nowrap">
+        <div className='bg-white'>
+        <div className=" relative ">
+          <div className="text-left h-16 ml-6  relative  font-bold pt-5 whitespace-nowrap">
             {image.Name}
           </div>
-          <div className="flex items-center justify-between  ">
+          <div className="flex items-center justify-between relative left-4  ">
             <div className='text-pink-700 whitespace-nowrap relative mr-2 text-xl'>
               <FontAwesomeIcon icon={faLocationDot}/>
             </div>
-            <div className="text-center h-16 text-gray-600 relative pr-56  py-5 whitespace-nowrap">
+            <div className="text-center h-16 text-gray-600 relative mr-56  py-5 whitespace-nowrap">
               {image.Location}
             </div>
           </div>
-          <div className="relative  px-5 text-md  text-gray-600 z-10">
+          <div className="relative  px-5   text-gray-600 z-10">
             {image.description}
           </div>
         </div>
-        <div className='border-t-2 border-gray-300 relative top-10 rounded-b-md border-dashed'>
-          <div className="text-center h-16 rounded-b-md relative pr-56 font-bold text-gray-500 pt-5 text-black whitespace-nowrap">
+        <div className='border-t-2 border-gray-300 border-gray-400-2 bg-white relative top-10 rounded-b-md border-dashed'>
+          <div className="text-left h-8 rounded-b-md relative ml-4 font-bold  pt-5 text-black whitespace-nowrap">
             {image.category}
           </div>
-          <div className='relative  flex  '>
-            <div className='relative left-64 mr-4  rounded-full bottom-12  w-12 h-12 border-2 p-3 text-center text-gray-400'>
+          <div className='flex  '>
+            <div className='relative left-48 mr-2  rounded-full bottom-4  w-10 h-10 border-2 p-2 text-center text-gray-400'>
               <FontAwesomeIcon icon={faEnvelope}/>
             </div>
-            <div className='relative left-64 whitespace-nowrap rounded-full bottom-12  w-12 h-12 border-2 p-3 text-center text-gray-400'>
+            <div className='relative left-48 mr-2 whitespace-nowrap rounded-full bottom-4  w-10 h-10 border-2 p-2 text-center text-gray-400'>
               <FontAwesomeIcon icon={faHeart}/>
             </div>
           </div>
+        </div>
+        </div>
+    </div>
+    ))}
+  </div>
+  </div>
+  
+     
+
+  <div className="container mx-auto my-20">
+      <h2 className=" flex items-center justify-center text-lg text-gray-700 ">Our Partners</h2>
+  <div className="flex items-center justify-center">
+  
+    <h2 className="text-4xl font-bold mr-2 text-gray-700">We Have Worked with</h2>
+    <h2 className="text-4xl font-bold text-pink-600">10,000+</h2>
+  </div>
+  <p className="text-4xl font-medium mb-12 text-gray-700 flex items-center justify-center">Trusted Companies</p>
+          
+          
+    <div className="container mx-auto">
+  <div className="grid grid-cols-6 gap-6">
+    {companies.slice(0, 6).map((image, index) => (
+      <div className="col-span-1 p-2" key={index}>
+        <img
+          src={image.url}
+          className="w-full object-fit-cover rounded-t-md h-16"
+        />
+      </div>
+    ))}
+  </div>
+  <div className="grid grid-cols-6 gap-2 mt-4">
+    <div className="col-start-2 col-span-1 p-2">
+      <img
+        src={companies[6].url}
+        className="w-full object-fit-cover rounded-t-md"
+      />
+    </div>
+    <div className="col-start-3 col-span-1 p-2">
+      <img
+        src={companies[7].url}
+        className="w-full object-fit-cover rounded-t-md"
+      />
+    </div>
+    <div className="col-start-4 col-span-1 p-2">
+      <img
+        src={companies[8].url}
+        className="w-full object-fit-cover rounded-t-md"
+      />
+    </div>
+    <div className="col-start-5 col-span-1 p-2">
+      <img
+        src={companies[9].url}
+        className="w-full object-fit-cover rounded-t-md"
+      />
+    </div>
+  </div>
+</div>
+</div>
+
+
+      <div className="container mx-auto relative  ">
+  <div className="flex flex-wrap relative ml-16 right-4">
+    {images.map((image) => (
+      <div className="w-full  sm:w-full md:w-1/2  lg:w-1/3 p-2 gap-2 " key={image.url}>
+        <div className="h-60 relative ">
+          <img
+            src={image.url}
+            alt={image.description}
+            className="w-full h-full object-fit-cover rounded-t-md"
+          />
+          </div>
+          <div className="bg-white border-6  border-white  rounded-b-md text-left relative  pl-6">
+            <div className='relative  py-4 '>
+            <div className="rounded-md p-2  border-2  border-pink-200 w-32 h-10 bg-pink-200 text-center   font-bold text-md relative   text-red-600 ">
+              {image.catagory}
+            </div></div>
+            <div className="text-center relative font-bold  whitespace-nowrap">
+              {image.qtn}
+            </div>
+            <div className=" h-16 rounded-b-md relative text-gray-500 font-bold pt-5">
+              {image.description}
+            </div>
+            <div className='line-2 line-black whitespace-nowrap flex relative  bottom-0 '>
+            <img
+    className="rounded-full  h-14 w-14 object-cover absolute  top-20 mt-2 left-6 left-50% transform -translate-x-1/2 -translate-y-1/2 border-4 border-white z-20"
+    src={image.profile}
+    alt="description Image"
+  />
+  </div>
+  <div className="text-center h-16 rounded-b-md right-10 top-20 p-1 relative font-bold  justify-center flex ">
+  <div className='text-green-500 relative m-3 bottom-3'><FontAwesomeIcon icon={faEye}/> </div> {image.view} views
+            </div>
+            <div className="text-center h-16 rounded-b-md relative justify-end flex font-bold p-5">
+            <div className='text-yellow-500 relative  m-3 bottom-3'>  <FontAwesomeIcon icon={faClock}/>  </div> {image.date}
+            </div>
+           
         </div>
       </div>
     ))}
@@ -396,237 +508,238 @@ Search
 </div>
 
 
-        <div className='w-full bg-gray-200 '>
-      <div className="container text-black p-10 relative ">
-  <section className="pricing py-8 ">
-    <div className="container relative mx-32 ">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative  ">
 
-      <div className="col-md-4  border-2  rounded-xl relative  mr-5 p-14 pr-10 bg-white transition-transform duration-300 ease-in-out transform hover:-translate-y-3">
-  <div className="Goodup-price-wrap dark-price ">
-  <div className="Goodup-author-header ">
-  <div className="Goodup-price-currency  ">
-    <h3 className="text-5xl font-weight-extrabold ">
-    
-      <span className="Goodup-new-price text-gray-400 text-xl">$</span>
-          <span className="Goodup-new-price text-6xl">49</span>
+<div className='w-full bg-gray-200 '>
+<div className="container text-black p-4 relative ">
+<section className=" py-8 ">
+<div className="container relative mx-32 ">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-2 relative  ">
 
-          <span className="Goodup-new-price text-gray-400 text-xl">$</span>
-          <span className="Goodup-old-price text-4xl text-gray-400">149</span></h3>
-     
-    
-              </div>
-              <div className="flex justify-between">
-  <div className="Goodup-price-tlt">
-    <p className="text-3xl">Personal</p>
-  </div>
-  <div className="Goodup-price-ribbon">
-    <span className="Goodup-ribbon-offer all text-orange-500 absolute top-32 font-bold right-48">50% Off</span>
-  </div>
-</div>
-              <div className="Goodup-price-subtitle text-2xl  whitespace-no-wrap">Best Choice for Individuals</div>
-            </div>
-            <div className="Goodup-price-body pb-8 p-2">
-  <div className='border-t-2 border-gray-500 text-black my-10 z-20  '></div> 
-  <ul className="price__features py-2">
-    <li className="flex items-center font-md text-bold  pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>Lifetime Bandwidth Usage</span>
-    </li>
-    <li className="flex items-center font-md text-bold  pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>6 Months Support &amp; Updates</span>
-    </li>
-    <li className="flex items-center font-md text-bold  pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>10 Website License</span>
-    </li>
-    <li className="flex items-center font-md text-bold  pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>Quickstart Included</span>
-    </li>
-    <li className="flex items-center font-md text-bold  pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>Access to Plugins &amp; Theme</span>
-    </li>
-    <li className="flex items-center font-md text-bold  pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>Branding/Copyright Removal</span>
-    </li>
-  </ul>
-</div>
-<div className="Goodup-price-bottom  border-dashed border-2 border-gray-600 rounded-full hover:bg-pink-700 p-4 flex justify-center items-center h-20">
-  <a className="Goodup-price-btn items-center" href="#">
-   <FontAwesomeIcon icon={faBasketShopping}/> Purchase Now
-  </a>
-</div>
-          </div>
+<div className="col-md-4  border-2  rounded-xl relative  mr-5 p-14 pr-10 bg-white transition-transform duration-300 ease-in-out transform hover:-translate-y-3">
+<div className=" dark-price ">
+<div className="relative ">
+<div className=" text-5xl ">
+<h3 className="font-weight-extrabold ">
+
+<span className=" text-gray-400 text-xl">$</span>
+    <span className=" text-6xl">49</span>
+
+    <span className=" text-gray-400 text-xl">$</span>
+    <span className=" text-4xl text-gray-400">149</span></h3>
+
+
         </div>
-
-        <div className="col-span-1 md:col-span-1 border-2  rounded-xl border-gray-100 relative p-14 mr-5 bg-white text-gray-600 transition-transform duration-300 ease-in-out transform hover:-translate-y-3">
-  <div className="Goodup-price-wrap dark-price">
-    <div className="Goodup-author-header ">
-      <div className="Goodup-price-currency ">
-        <h3 className="text-5xl font-weight-extrabold">
-        
-        <span className="Goodup-new-price text-gray-400 text-xl">$</span>
-          <span className="Goodup-new-price text-6xl text-pink-600">129</span>
-          <span className="Goodup-new-price text-gray-400 text-xl">$</span>
-          <span className="Goodup-old-price text-4xl text-gray-400">199</span></h3>
-     
-    
-              </div>
-              <div className="flex justify-between">
-  <div className="Goodup-price-tlt">
-    <p className="text-3xl">Personal</p>
-  </div>
-  <div className="Goodup-price-ribbon">
-    <span className="Goodup-ribbon-offer all text-green-500 absolute top-32 font-bold right-48">50% Off</span>
-  </div>
+        <div className="flex justify-between">
+<div className="Goodup-price-tlt">
+<p className="text-3xl">Personal</p>
 </div>
-              <div className="Goodup-price-subtitle text-2xl  whitespace-no-wrap">Best Choice for Individuals</div>
-            </div>
-            <div className="Goodup-price-body pb-8 p-2 ">
-  <div className='border-t-2 border-gray-500 text-black my-10 z-20 '></div> 
-  <ul className="price__features py-2 ">
-    <li className="flex items-center font-md text-bold  pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>Lifetime Bandwidth Usage</span>
-    </li>
-    <li className="flex items-center  pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>12 Months Support &amp; Updates</span>
-    </li>
-    <li className="flex items-center  pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>20 Website License</span>
-    </li>
-    <li className="flex items-center  pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>Quickstart Included</span>
-    </li>
-    <li className="flex items-center  pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>Access to Plugins &amp; Theme</span>
-    </li>
-    <li className="flex items-center  pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>Branding/Copyright Remova</span>
-    </li>
-  </ul>
+<div className="Goodup-price-ribbon">
+<span className="text-orange-500 absolute top-16  font-bold right-24  border-orange-100 rounded-sm border-2 bg-orange-100">50% Off</span>
 </div>
-<div className="Goodup-price-bottom border-dashed border-2 border-gray-600 bg-pink-600 text-white rounded-full hover:bg-pink-700 p-4 flex justify-center items-center h-20">
-  <a className="Goodup-price-btn items-center" href="#">
-   <FontAwesomeIcon icon={faBasketShopping}/> Purchase Now
-  </a>
 </div>
-          </div>
-        </div>
-
-        <div className="col-md-4  border-2  rounded-xl  relative  mr-5 p-14 pr-10 bg-white transition-transform duration-300 ease-in-out transform hover:-translate-y-3">
-  <div className="Goodup-price-wrap dark-price ">
-  <div className="Goodup-author-header ">
-  <div className="Goodup-price-currency  ">
-    <h3 className="text-5xl font-weight-extrabold ">
-    
-      <span className="Goodup-new-price text-gray-400 text-xl">$</span>
-          <span className="Goodup-new-price text-6xl">149</span>
-
-          <span className="Goodup-new-price text-gray-400 text-xl">$</span>
-          <span className="Goodup-old-price text-5xl text-gray-400">249</span></h3>
-     
-    
-              </div>
-              <div className="flex justify-between">
-  <div className="Goodup-price-tlt">
-    <p className="text-3xl">Personal</p>
-  </div>
-  <div className="Goodup-price-ribbon">
-    <span className="Goodup-ribbon-offer all text-orange-500 absolute top-32 font-bold right-48">50% Off</span>
-  </div>
+        <div className="Goodup-price-subtitle text-2xl  whitespace-no-wrap">Best Choice for Individuals</div>
+      </div>
+      <div className="Goodup-price-body pb-8 p-2">
+<div className='border-t-2 border-gray-500 text-black my-10 z-20  '></div> 
+<ul className="price__features py-2">
+<li className="flex items-center font-md text-bold  pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>Lifetime Bandwidth Usage</span>
+</li>
+<li className="flex items-center font-md text-bold  pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>6 Months Support &amp; Updates</span>
+</li>
+<li className="flex items-center font-md text-bold  pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>10 Website License</span>
+</li>
+<li className="flex items-center font-md text-bold  pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>Quickstart Included</span>
+</li>
+<li className="flex items-center font-md text-bold  pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>Access to Plugins &amp; Theme</span>
+</li>
+<li className="flex items-center font-md text-bold  pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>Branding/Copyright Removal</span>
+</li>
+</ul>
 </div>
-              <div className="Goodup-price-subtitle text-2xl  whitespace-no-wrap">Best Choice for Individuals</div>
-            </div>
-            <div className="Goodup-price-body pb-8 p-2  ">
-  <div className='border-t-2 border-gray-500 text-black my-10 z-20 '></div> 
-  <ul className="price__features py-2">
-    <li className="flex items-center font-sm pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>Lifetime Bandwidth Usage</span>
-    </li>
-    <li className="flex items-center  font-md text-bold pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>Lifetime Support & Updates</span>
-    </li>
-    <li className="flex items-center font-md text-bold pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>50 Website License</span>
-    </li>
-    <li className="flex items-center font-md text-bold pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>Quickstart Included</span>
-    </li>
-    <li className="flex items-center font-md text-bold pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>Access to Plugins &amp; Theme</span>
-    </li>
-    <li className="flex items-center font-md text-bold pb-6">
-      <svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
-        <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
-      </svg>
-      <span>Branding/Copyright Removal</span>
-    </li>
-  </ul>
+<div className=" border-dashed border-2 border-gray-600 rounded-full hover:bg-pink-700 hover:text-white flex justify-center items-center h-16 w-72">
+<a className=" items-center" href="#">
+<FontAwesomeIcon icon={faBasketShopping}/> Purchase Now
+</a>
 </div>
-<div className="Goodup-price-bottom border-dashed border-2 border-gray-600 rounded-full hover:bg-pink-700 p-4 flex justify-center items-center h-20 ">
-  <a className="Goodup-price-btn " href="#">
-   <FontAwesomeIcon icon={faBasketShopping}/> Purchase Now
-  </a>
-</div>
-          </div>
-        </div>
-        </div>
-        
-      
     </div>
-  </section>
+  </div>
+
+  <div className="col-span-1 md:col-span-1 border-2  rounded-xl border-gray-100 relative p-14 mr-5 bg-white text-gray-600 transition-transform duration-300 ease-in-out transform hover:-translate-y-3">
+<div className="Goodup-price-wrap dark-price">
+<div className="Goodup-author-header ">
+<div className="Goodup-price-currency ">
+  <h3 className="text-5xl font-weight-extrabold">
+  
+  <span className=" text-gray-400 text-xl">$</span>
+    <span className=" text-6xl text-pink-600">129</span>
+    <span className=" text-gray-400 text-xl">$</span>
+    <span className=" text-4xl text-gray-400">199</span></h3>
+
+
+        </div>
+        <div className="flex justify-between">
+<div className="Goodup-price-tlt">
+<p className="text-3xl">Personal</p>
+</div>
+<div className="Goodup-price-ribbon">
+<span className="text-green-500 absolute top-24 mt-6 font-bold right-32  border-green-100 rounded-sm border-2 bg-green-100">50% Off</span>
+</div>
+</div>
+        <div className="Goodup-price-subtitle text-2xl  whitespace-no-wrap">Best Choice for Individuals</div>
+      </div>
+      <div className="Goodup-price-body pb-8 p-2 ">
+<div className='border-t-2 border-gray-500 text-black my-10 z-20 '></div> 
+<ul className="price__features py-2 ">
+<li className="flex items-center font-md text-bold  pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>Lifetime Bandwidth Usage</span>
+</li>
+<li className="flex items-center  pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>12 Months Support &amp; Updates</span>
+</li>
+<li className="flex items-center  pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>20 Website License</span>
+</li>
+<li className="flex items-center  pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>Quickstart Included</span>
+</li>
+<li className="flex items-center  pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>Access to Plugins &amp; Theme</span>
+</li>
+<li className="flex items-center  pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>Branding/Copyright Remova</span>
+</li>
+</ul>
+</div>
+<div className=" border-dashed border-2 border-gray-600 rounded-full bg-pink-700 text-white flex justify-center items-center h-16 w-72">
+<a className="Goodup-price-btn items-center" href="#">
+<FontAwesomeIcon icon={faBasketShopping}/> Purchase Now
+</a>
+</div>
+    </div>
+  </div>
+
+  <div className="col-md-4  border-2  rounded-xl  relative  mr-5 p-14 pr-10 bg-white transition-transform duration-300 ease-in-out transform hover:-translate-y-3">
+<div className="Goodup-price-wrap dark-price ">
+<div className="Goodup-author-header ">
+<div className="Goodup-price-currency  ">
+<h3 className="text-5xl font-weight-extrabold ">
+
+<span className=" text-gray-400 text-xl">$</span>
+    <span className=" text-6xl">149</span>
+
+    <span className=" text-gray-400 text-xl">$</span>
+    <span className="Goodup-old-price text-5xl text-gray-400">249</span></h3>
+
+
+        </div>
+        <div className="flex justify-between">
+<div className="Goodup-price-tlt">
+<p className="text-3xl">Personal</p>
+</div>
+<div className="Goodup-price-ribbon">
+<span className=" text-orange-500 absolute top-24 mt-6 font-bold right-32  border-orange-100 rounded-sm border-2 bg-orange-100">50% Off</span>
+</div>
+</div>
+        <div className=" text-2xl  whitespace-no-wrap">Best Choice for Individuals</div>
+      </div>
+      <div className=" pb-8 p-2  ">
+<div className='border-t-2 border-gray-500 text-black my-10 z-20 '></div> 
+<ul className="price__features py-2">
+<li className="flex items-center font-sm pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>Lifetime Bandwidth Usage</span>
+</li>
+<li className="flex items-center  font-md text-bold pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>Lifetime Support & Updates</span>
+</li>
+<li className="flex items-center font-md text-bold pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>50 Website License</span>
+</li>
+<li className="flex items-center font-md text-bold pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>Quickstart Included</span>
+</li>
+<li className="flex items-center font-md text-bold pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>Access to Plugins &amp; Theme</span>
+</li>
+<li className="flex items-center font-md text-bold pb-6">
+<svg viewBox="0 0 24 24" width="24" height="24" className="fill-current text-red-500 mr-2">
+  <path d="M14.707 12l-4.146 4.146a1 1 0 0 0 1.414 1.414l4.793-4.793a1 1 0 0 0 0-1.414l-4.793-4.793a1 1 0 1 0-1.414 1.414L14.707 12z"/>
+</svg>
+<span>Branding/Copyright Removal</span>
+</li>
+</ul>
+</div>
+<div className="  border-dashed border-2 border-gray-600 rounded-full hover:bg-pink-700 hover:text-white flex justify-center items-center h-16 w-72">
+<a className="Goodup-price-btn " href="#">
+<FontAwesomeIcon icon={faBasketShopping}/> Purchase Now
+</a>
+</div>
+    </div>
+  </div>
+  </div>
+  
+
+</div>
+</section>
 </div></div>
- 
- 
+
+
 <div className="bg-green-900 relative h-100">
   <img src="/images/landing-bg.png" alt="landing" className="absolute h-100 bg-green-900 w-full h-full object-cover z-20" />
 
@@ -657,6 +770,8 @@ Search
     </div>
   </div>
 </div>
+
+
 
 <section className="space">
   <div className="container">
@@ -714,11 +829,9 @@ Search
   </div>
 </section>
 
+</div>
+     </>
+     )
 
-
-  </>
-  );
 }
-
-
 export default HomeScreen2;
