@@ -6,9 +6,9 @@ function Footer(){
  <div className="footer-middle mx-48">
   <div className="container my-16 justify-center ">
     <div className="flex flex-col lg:flex-row justify-between">
-      <div className="w-full mb-8 lg:mb-0">
+      <div className="w-full mb-8 lg:mb-0 lg:px-0">
         <div className="footer_widget">
-          <img src="/images/logo.png" className="img-footer mb-2" alt="Logo" />
+          <img src="/images/logo.png" className=" mb-2" alt="Logo" />
           <div className="address my-6 whitespace-nowrap">
             7742 Sadar Street Range Road, USA<br />United Kingdom GHQ11
           </div>
@@ -46,10 +46,10 @@ function Footer(){
           </div>
         </div>
       </div>
-      <div className="w-full mb-8 lg:mb-0 relative pr-10 ml-64 ">
-        <div className="footer_widget ">
-          <h4 className="widget_title whitespace-nowrap py-3 font-bold">Main Navigation</h4>
-          <ul className="footer-menu">
+      <div className="w-full mb-8 lg:mb-0 left-16 relative pr-6 flex justify-center ">
+        <div className="whitespace-nowrap relative mr-24">
+          <h4 className="  py-3 font-bold">Main Navigation</h4>
+          <ul className="mx-2">
             <li className="py-3">
               <a href="#">Explore Listings</a>
             </li>
@@ -68,10 +68,10 @@ function Footer(){
           </ul>
         </div>
       </div>
-      <div className="w-full mb-8 lg:mb-0 relative pr-10">
-        <div className="footer_widget">
+      <div className="w-full mb-8 lg:mb-0 lg:px-0 relative pr-6">
+        <div className="whitespace-nowrap">
           <h4 className="widget_title py-3 font-bold">Business Owners</h4>
-          <ul className="footer-menu">
+          <ul className="mx-2">
             <li className="py-3">
               <a href="#">Browse Categories</a>
             </li>
@@ -87,10 +87,10 @@ function Footer(){
           </ul>
         </div>
       </div>
-      <div className="w-full mb-8 lg:mb-0 relative pr-10">
-        <div className="footer_widget">
+      <div className="w-full mb-8 lg:mb-0 lg:px-0 relative pr-6">
+        <div className="whitespace-nowrap">
           <h4 className="widget_title py-3 font-bold">About Company</h4>
-          <ul className="footer-menu">
+          <ul className="mx-2">
             <li className="py-3">
               <a href="#">Who We Are?</a>
             </li>
@@ -110,10 +110,10 @@ function Footer(){
          </div>
        </div>
 
-       <div className="w-full mb-8 lg:mb-0 relative pr-10 whitespace-nowrap">
-         <div className="footer_widget">
-           <h4 className="widget_title text-black font-24 py-3 font-bold text-10">Helpful Topics</h4>
-        <ul className="footer-menu ">
+       <div className="w-full mb-8 lg:mb-0 lg:px-0 relative pr-6 whitespace-nowrap">
+         <div className="whitespace-nowrap">
+           <h4 className=" text-black font-24 py-3 font-bold text-10">Helpful Topics</h4>
+        <ul className="mx-2 ">
             <li className="py-3">
               <a href="#">Site Map</a>
             </li>
