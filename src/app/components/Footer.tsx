@@ -1,5 +1,3 @@
-
-
 function Footer(){
     return(
 <footer className="light-footer skin-light-footer style-2 bg-white z-30">
