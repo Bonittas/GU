@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container mx-4 py-16">
         <div className="flex flex-wrap justify-start lg:mx-10">
           <div className="w-full lg:w-1/5 relative lg:left-20  mb-8 lg:mb-0 lg:px-4">
-            <img src="/images/logo.png" className="mb-8" alt="Logo" />
+            <img src="/images/logo.png" className="mb-8 md:w-full sm:w-1/2" alt="Logo" />
             <div className="text-gray-600 mb-4">
               7742 Sadar Street Range Road, USA<br />United Kingdom GHQ11
             </div>
