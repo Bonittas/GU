@@ -121,18 +121,39 @@ export default function Header() {
               onMouseLeave={toggleHomeSubmenu}
             >
               {showHomeSubmenu && (
-                <ul className='border-2 rounded-md width-72 bg-white'>
-                  <li className='bg-white mx-4 border-gray-300 border-b-2'>
+                <ul className='border-2 rounded-md width-full bg-white'>
+                  <li className='bg-white mx-4 border-gray-200 border-b-2'>
                     <Link href="/Listings/ListingScreen1" legacyBehavior>
-                      <a className="block py-3 text-black font-medium hover:text-pink-700 bg-white">
-                        Home1
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                      HomeScreen1
                       </a>
                     </Link>
                   </li>
-                  <li className='mx-2 bg-white mx-4 border-gray-300 border-b-2'>
+                  <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2'>
                     <Link href="/Listings/ListingScreen2" legacyBehavior>
-                      <a className="block py-3 text-black font-medium hover:text-pink-700 bg-white">
-                        Home2
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                       HomeScreen2
+                      </a>
+                    </Link>
+                  </li>
+                  <li className='bg-white mx-4 border-gray-200 border-b-2'>
+                    <Link href="/Listings/ListingScreen1" legacyBehavior>
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                      HomeScreen3
+                      </a>
+                    </Link>
+                  </li>
+                  <li className='bg-white mx-4 border-gray-200 border-b-2'>
+                    <Link href="/Listings/ListingScreen1" legacyBehavior>
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                      HomeScreen4
+                      </a>
+                    </Link>
+                  </li>
+                  <li className='bg-white mx-4 '>
+                    <Link href="/Listings/ListingScreen1" legacyBehavior>
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        HomeScreen5
                       </a>
                     </Link>
                   </li>
@@ -160,17 +181,38 @@ export default function Header() {
             >
               {showListingsSubmenu && (
                 <ul className='border-2 rounded-md width-72 bg-white'>
-                  <li className='bg-white mx-4 border-gray-300 border-b-2'>
+                  <li className='bg-white mx-4 border-gray-200 border-b-2'>
                     <Link href="/Listings/ListingScreen1" legacyBehavior>
-                      <a className="block py-3 text-black font-medium hover:text-pink-700 bg-white">
-                        Listing1
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        Grid Layout
                       </a>
                     </Link>
                   </li>
-                  <li className='mx-2 bg-white mx-4 border-gray-300 border-b-2'>
+                  <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2'>
                     <Link href="/Listings/ListingScreen2" legacyBehavior>
-                      <a className="block py-3 text-black font-medium hover:text-pink-700 bg-white">
-                        Listing2
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        List Layout
+                      </a>
+                    </Link>
+                  </li>
+                  <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2'>
+                    <Link href="/Listings/ListingScreen2" legacyBehavior>
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        Map Styles
+                      </a>
+                    </Link>
+                  </li>
+                  <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2'>
+                    <Link href="/Listings/ListingScreen2" legacyBehavior>
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        Single Listing
+                      </a>
+                    </Link>
+                  </li>
+                  <li className='mx-2 bg-white mx-4 '>
+                    <Link href="/Listings/ListingScreen2" legacyBehavior>
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        Author Detail
                       </a>
                     </Link>
                   </li>
@@ -185,7 +227,7 @@ export default function Header() {
               onMouseLeave={toggleDashboardSubmenu}
             >
               <div className="flex items-center font-medium text-black hover:text-pink-700">
-                <span>Dashboard</span>
+                <span>User Dashboard</span>
                 <div className="relative  md:m-2 top-1 text-md sm:ml-12 sm:left-2 md:left-0  ">
                   <FontAwesomeIcon icon={faAngleDown} />
                 </div>
@@ -198,17 +240,66 @@ export default function Header() {
             >
               {showDashboardSubmenu && (
                 <ul className='border-2 rounded-md width-72 bg-white'>
-                  <li className='bg-white mx-4 border-gray-300 border-b-2'>
+                  <li className='bg-white mx-4 border-gray-200 border-b-2'>
                     <Link href="/Dashboard/DashboardScreen1" legacyBehavior>
-                      <a className="block py-3 text-black font-medium hover:text-pink-700 bg-white">
-                        Dashboard1
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        Dashboard
                       </a>
                     </Link>
                   </li>
-                  <li className='mx-2 bg-white mx-4 border-gray-300 border-b-2'>
+                  <li className='bg-white mx-4 border-gray-200 border-b-2'>
+                    <Link href="/Dashboard/DashboardScreen1" legacyBehavior>
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        My Listing
+                      </a>
+                    </Link>
+                  </li>
+                  <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2'>
                     <Link href="/Dashboard/DashboardScreen2" legacyBehavior>
-                      <a className="block py-3 text-black font-medium hover:text-pink-700 bg-white">
-                        Dashboard2
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        Add Listing
+                      </a>
+                    </Link>
+                  </li>
+                  <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2'>
+                    <Link href="/Dashboard/DashboardScreen2" legacyBehavior>
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        Saved Listing
+                      </a>
+                    </Link>
+                  </li>
+                  <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2'>
+                    <Link href="/Dashboard/DashboardScreen2" legacyBehavior>
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        My Bookings
+                      </a>
+                    </Link>
+                  </li>
+                  <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2'>
+                    <Link href="/Dashboard/DashboardScreen2" legacyBehavior>
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        Wallet
+                      </a>
+                    </Link>
+                  </li>
+                  <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2'>
+                    <Link href="/Dashboard/DashboardScreen2" legacyBehavior>
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        Messages
+                      </a>
+                    </Link>
+                  </li>
+                  <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2'>
+                    <Link href="/Dashboard/DashboardScreen2" legacyBehavior>
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        My Profile
+                      </a>
+                    </Link>
+                  </li>
+                  <li className='mx-2 bg-white mx-4'>
+                    <Link href="/Dashboard/DashboardScreen2" legacyBehavior>
+                      <a className="block py-5 text-black font-medium hover:text-pink-700 bg-white">
+                        Changed Password
                       </a>
                     </Link>
                   </li>
@@ -236,20 +327,76 @@ export default function Header() {
             >
               {showPagesSubmenu && (
                 <ul className='border-2 rounded-md width-72 bg-white'>
-                  <li className='bg-white mx-4 border-gray-300 border-b-2'>
-                    <Link href="/pages/about" legacyBehavior>
-                      <a className="block py-3 text-black hover:text-pink-600 bg-white">
+                <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2' >
+                <Link href="/pages/contact" legacyBehavior>
+                  <a className="block py-5 text-black hover:text-pink-600 bg-white">
+                    Blog Style
+                  </a>
+                </Link>
+              </li>
+                  <li className='bg-white mx-4 border-gray-200 border-b-2'>
+                    <Link href="/Pages/about" legacyBehavior>
+                      <a className="block py-5 text-black hover:text-pink-600 bg-white">
                       About Us
                       </a>
                     </Link>
                   </li>
-                  <li className='mx-2 bg-white mx-4 ' >
+                  <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2' >
                     <Link href="/pages/contact" legacyBehavior>
-                      <a className="block py-3 text-black hover:text-pink-600 bg-white">
-                        Contacts
+                      <a className="block py-5 text-black hover:text-pink-600 bg-white">
+                        Contact
                       </a>
                     </Link>
                   </li>
+                  <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2' >
+                  <Link href="/pages/contact" legacyBehavior>
+                    <a className="block py-5 text-black hover:text-pink-600 bg-white">
+                      Check Out
+                    </a>
+                  </Link>
+                </li>
+                <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2' >
+                <Link href="/pages/contact" legacyBehavior>
+                  <a className="block py-5 text-black hover:text-pink-600 bg-white">
+                    Pricing
+                  </a>
+                </Link>
+              </li>
+              <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2' >
+              <Link href="/pages/contact" legacyBehavior>
+                <a className="block py-5 text-black hover:text-pink-600 bg-white">
+                  Sign Up
+                </a>
+              </Link>
+            </li>
+            <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2' >
+            <Link href="/pages/contact" legacyBehavior>
+              <a className="block py-5 text-black hover:text-pink-600 bg-white">
+                Sign In
+              </a>
+            </Link>
+          </li>
+          <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2' >
+          <Link href="/pages/contact" legacyBehavior>
+            <a className="block py-5 text-black hover:text-pink-600 bg-white">
+              Privacy Policy
+            </a>
+          </Link>
+        </li>
+        <li className='mx-2 bg-white mx-4 border-gray-200 border-b-2' >
+        <Link href="/pages/contact" legacyBehavior>
+          <a className="block py-5 text-black hover:text-pink-600 bg-white">
+            FAQs
+          </a>
+        </Link>
+      </li>
+      <li className='mx-2 bg-white mx-4 ' >
+      <Link href="/pages/contact" legacyBehavior>
+        <a className="block py-5 text-black hover:text-pink-600 bg-white">
+          404 Page
+        </a>
+      </Link>
+    </li>
                 </ul>
               )}
             </div>
