@@ -265,34 +265,36 @@ function HomeScreen2() {
       <div className="flex items-center justify-center bg-pink"> 
   <div className="w-full relative"> 
     <div className="absolute inset-0"> 
-      <img src="/images/banner-1.jpg" alt="banner" className="absolute inset-0 w-full h-full object-cover" /> 
+      <img src="/images/banner-1.jpg" alt="banner" className="absolute inset-0 bg-pink-600 w-full h-full object-cover" /> 
       <div className="absolute inset-0 bg-black opacity-40"></div>
     </div>
-    <div className="text-center text-white relative z-10 mt-64 ">
-      <h1 className="text-6xl font-bold mb-2 ml-2 font-custom">Explore Great Place in Your Town</h1>
+    <div className="text-center text-white relative z-10 mt-64 bottom-16 mx-2">
+      <h1 className="lg:text-6xl  md:text-5xl sm:text-4xl font-bold mb-2 ml-2 font-custom">Explore Great Place in Your Town</h1>
       <p className="text-md font-medium mb-32">Explore wonderful place to stay, salon, shopping, massage or visit local areas.</p>
-      <form className="flex flex-wrap justify-center h-60 relative rounded-md">
-        <div className="w-full sm:w-1/2 lg:w-1/3">
+      <form className="flex flex-wrap justify-center h-60 relative rounded-md mx-4">
+        <div className="w-full sm:w-1/2 lg:w-1/3 ">
           <div className="flex items-center text-black bg-white h-20 rounded-l-md">
             <p className="relative  font-bold left-4 pr-4 text-xl ">Find</p>
-            <div className="w-full sm:w-full">
+            <div className="w-full sm:w-full ">
               <input type="text-gray " className="py-2 px-6 h-20 w-full border-r-2 border-gray-200" placeholder="Nail salons, plumbers, takeout..." />
             </div>
           </div> 
         </div> 
-        <div className="w-full sm:w-1/3 lg:w-1/3 mt-4 sm:mt-0">
-          <div className="flex items-center  bg-white h-20 rounded-r-md">
-            <p className="relative  font-bold ml-3 text-xl text-black">Where</p>
+        <div className="w-full sm:w-1/3 lg:w-1/3 mt-4 sm:mt-0 ">
+          <div className="flex items-center  bg-white h-20 rounded-r-md ">
+            <p className="relative  font-bold ml-3 text-xl text-black ">Where</p>
             <div className="w-full sm:w-full">
-              <input type="text" className="py-2 px-3 h-20 w-full" placeholder="San Francisco, CA" />
+              <input type="text" className="py-2 px-3 h-20 w-full " placeholder="San Francisco, CA" />
             </div>
             </div>
             <div className="w-full mt-4 flex justify-end">
-          <button className="w-1/8 relative  left-32 bottom-24   bg-pink-600 h-20 text-white font-bold py-2 px-10 rounded-r-md" type="button">
-            Search
-            <div className='text-white-500 text-xl'><FontAwesomeIcon icon={faMagnifyingGlass } /></div> 
-          </button> 
-        </div> 
+  <button className="w-full sm:w-full  lg:bottom-32 mt-4 items-center pt-6 bottom-4 lg:left-20 relative bg-pink-600 h-20 text-white font-bold py-6 pr-16  rounded-r-md sm:rounded-r-md lg:mt-8 lg:ml-4 lg:w-1/5 flex items-center" type="button">
+   <div className='pl-1 mr-1'>Search</div> 
+    <div className="text-white-500 text-xl pr-4 text-md ">
+      <FontAwesomeIcon icon={faMagnifyingGlass} />
+    </div>
+  </button>
+</div>
           
         </div> 
  
@@ -300,10 +302,11 @@ function HomeScreen2() {
     </div> 
   </div> 
 </div>
+<div className='mx-1'>
      <div  className='bg-gray-100'>
 
-     <div className='bg-gray-100 relative bottom-10 '>
-  <div className="container mx-auto relative my-14 top-5">
+     <div className='bg-gray-100 relative bottom-10 mx-2'>
+  <div className="container relative my-14 top-5 ">
     <div className="row">
       <div className="col-xl-12 col-lg-12 col-md-12 col-12 mt-10 mb-16">
         <div className="sec_title relative pt-10 text-center mb-5">
@@ -316,8 +319,8 @@ function HomeScreen2() {
   <div className="container mx-auto ">
   <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-6 gap-5">
     {TopCategories.map((category) => (
-      <div className="flex flex-col items-center justify-center w-full h-64 relative rounded-md bg-white p-4 mb-4" >
-        <button className="relative bottom-4 right-16 m-6  rounded-md hover:bg-green-700 hover:text-white text-sm text-green-700 bg-green-100 h-8 w-16">
+      <div className="flex flex-col items-left w-full h-64 relative rounded-md bg-white p-4 mb-4" >
+        <button className="relative  right-2 my-4 bottom-6 rounded-md hover:bg-green-700 hover:text-white text-sm text-green-700 bg-green-100 h-6 w-16">
           {category.cities}
         </button>
         <div className="">
@@ -338,7 +341,7 @@ function HomeScreen2() {
 <div className="container mx-auto ">
   <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-4 ">
     {places.map((image) => (
-      <div className="w-full h-full  relative border-2 mb-10" key={image.url}>
+      <div className="w-full h-full  relative border-2 mb-1" key={image.url}>
         <div className="h-64 relative">
           <img
             src={image.url}
@@ -376,16 +379,16 @@ function HomeScreen2() {
             </div>
           </div>
         </div>
-        <div className='bg-white'>
+        <div className='bg-white '>
         <div className=" relative ">
-          <div className="text-left h-16 ml-6  relative  font-bold pt-5 whitespace-nowrap">
+          <div className="text-left  ml-6  relative  font-bold pt-5 whitespace-nowrap">
             {image.Name}
           </div>
-          <div className="flex items-center justify-between relative left-4  ">
+          <div className="flex  justify-left whitspace-nowrap relative left-6  ">
             <div className='text-pink-700 whitespace-nowrap relative mr-2 text-xl'>
               <FontAwesomeIcon icon={faLocationDot}/>
             </div>
-            <div className="text-center h-16 text-gray-600 relative mr-56  py-5 whitespace-nowrap">
+            <div className="text-center h-16 text-gray-600 relative flex justify-left  whitespace-nowrap">
               {image.Location}
             </div>
           </div>
@@ -393,15 +396,15 @@ function HomeScreen2() {
             {image.description}
           </div>
         </div>
-        <div className='border-t-2 border-gray-300 border-gray-400-2 bg-white relative top-10 rounded-b-md border-dashed'>
-          <div className="text-left h-8 rounded-b-md relative ml-4 font-bold  pt-5 text-black whitespace-nowrap">
+        <div className='border-t-2 border-gray-300 border-gray-400-2 bg-white relative  top-4 rounded-b-md border-dashed'>
+          <div className="text-left  rounded-b-md relative ml-4 font-bold top-6 py-2 text-black whitespace-nowrap">
             {image.category}
           </div>
-          <div className='flex  '>
-            <div className='relative left-48 mr-2  rounded-full bottom-4  w-10 h-10 border-2 p-2 text-center text-gray-400'>
+          <div className='flex justify-end items-center'>
+            <div className='  relative rounded-full bottom-4 mr-2 w-10 h-10 border-2 p-2 text-center text-gray-400'>
               <FontAwesomeIcon icon={faEnvelope}/>
             </div>
-            <div className='relative left-48 mr-2 whitespace-nowrap rounded-full bottom-4  w-10 h-10 border-2 p-2 text-center text-gray-400'>
+            <div className='relative whitespace-nowrap  rounded-full mr-2 bottom-4  w-10 h-10 border-2 p-2 text-center text-gray-400'>
               <FontAwesomeIcon icon={faHeart}/>
             </div>
           </div>
@@ -414,66 +417,59 @@ function HomeScreen2() {
   
      
 
-  <div className="container mx-auto my-20">
+  <div className="container mx-auto my-20 mx-2">
       <h2 className=" flex items-center justify-center text-lg text-gray-700 ">Our Partners</h2>
-  <div className="flex items-center justify-center">
+  <div className="flex justify-center ">
   
-    <h2 className="text-4xl font-bold mr-2 text-gray-700">We Have Worked with</h2>
-    <h2 className="text-4xl font-bold text-pink-600">10,000+</h2>
+    <h2 className="text-4xl font-bold mr-2 text-gray-700 text-center whitespace-nowrap">We Have Worked with<span className="text-4xl font-bold text-pink-600 text-center">10,000+</span></h2>
+    
   </div>
   <p className="text-4xl font-medium mb-12 text-gray-700 flex items-center justify-center">Trusted Companies</p>
           
           
-    <div className="container mx-auto">
-  <div className="grid grid-cols-6 gap-6">
+  <div className="container mx-auto">
+  <div className="grid lg:grid-cols-6 sm:grid-cols-2 gap-6" style={{
+        gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))"
+      }}>
     {companies.slice(0, 6).map((image, index) => (
       <div className="col-span-1 p-2" key={index}>
         <img
           src={image.url}
-          className="w-full object-fit-cover rounded-t-md h-16"
+          className="w-full object-fit-cover rounded-t-md"
         />
       </div>
     ))}
   </div>
-  <div className="grid grid-cols-6 gap-2 mt-4">
-    <div className="col-start-2 col-span-1 p-2">
-      <img
-        src={companies[6].url}
-        className="w-full object-fit-cover rounded-t-md"
-      />
-    </div>
-    <div className="col-start-3 col-span-1 p-2">
-      <img
-        src={companies[7].url}
-        className="w-full object-fit-cover rounded-t-md"
-      />
-    </div>
-    <div className="col-start-4 col-span-1 p-2">
-      <img
-        src={companies[8].url}
-        className="w-full object-fit-cover rounded-t-md"
-      />
-    </div>
-    <div className="col-start-5 col-span-1 p-2">
-      <img
-        src={companies[9].url}
-        className="w-full object-fit-cover rounded-t-md"
-      />
-    </div>
+  <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-10 " style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+        gridTemplateRows: "auto",
+        gridAutoRows: "auto",
+        gap: "2px",
+      }}>
+    {companies.slice(6, 10).map((image, index) => (
+      <div key={index}>
+        <img
+          src={image.url}
+          className="w-full object-fit-cover rounded-t-md relative p-4 "
+        />
+      </div>
+    ))}
   </div>
 </div>
+
 </div>
 
 
-      <div className="container mx-auto relative  ">
-  <div className="flex flex-wrap relative ml-16 right-4">
+      <div className="container mx-auto relative ml-2 ">
+  <div className="flex flex-wrap relative items-left right-4 mx-1 ">
     {images.map((image) => (
       <div className="w-full  sm:w-full md:w-1/2  lg:w-1/3 p-2 gap-2 " key={image.url}>
         <div className="h-60 relative ">
           <img
             src={image.url}
             alt={image.description}
-            className="w-full h-full object-fit-cover rounded-t-md"
+            className="w-full h-full object-fit-cover rounded-t-md "
           />
           </div>
           <div className="bg-white border-6  border-white  rounded-b-md text-left relative  pl-6">
@@ -481,26 +477,27 @@ function HomeScreen2() {
             <div className="rounded-md p-2  border-2  border-pink-200 w-32 h-10 bg-pink-200 text-center   font-bold text-md relative   text-red-600 ">
               {image.catagory}
             </div></div>
-            <div className="text-center relative font-bold  whitespace-nowrap">
+            <div className=" relative text-left font-bold   overflow-hidden mr-1">
               {image.qtn}
             </div>
-            <div className=" h-16 rounded-b-md relative text-gray-500 font-bold pt-5">
+            <div className=" h-16 rounded-b-md relative text-gray-700 pt-5">
               {image.description}
             </div>
-            <div className='line-2 line-black whitespace-nowrap flex relative  bottom-0 '>
+            <div className='right-4  flex relative border-t-2 border-full top-10 border-gray-300 border-gray-400-2 bg-white relative rounded-b-md border-dashed bottom-0 '>
             <img
-    className="rounded-full  h-14 w-14 object-cover absolute  top-20 mt-2 left-6 left-50% transform -translate-x-1/2 -translate-y-1/2 border-4 border-white z-20"
+    className="rounded-full  h-14 w-14 object-cover absolute top-4 border-4 border-white z-20"
     src={image.profile}
     alt="description Image"
   />
   </div>
-  <div className="text-center h-16 rounded-b-md right-10 top-20 p-1 relative font-bold  justify-center flex ">
-  <div className='text-green-500 relative m-3 bottom-3'><FontAwesomeIcon icon={faEye}/> </div> {image.view} views
+  <div className='items-center whitespace-nowrap'>
+  <div className="text-center h-16 rounded-b-md top-16 p-1 mx-2 right-6 relative font-bold  justify-center flex ">
+  <div className='text-green-500 relative mx-1'><FontAwesomeIcon icon={faEye}/> </div> {image.view} views
             </div>
-            <div className="text-center h-16 rounded-b-md relative justify-end flex font-bold p-5">
-            <div className='text-yellow-500 relative  m-3 bottom-3'>  <FontAwesomeIcon icon={faClock}/>  </div> {image.date}
+            <div className="text-center h-16 rounded-b-md p-1 mx-4 relative justify-end flex font-bold ">
+            <div className='text-yellow-500 relative  mx-1 '>  <FontAwesomeIcon icon={faClock}/>  </div> {image.date}
             </div>
-           
+            </div>
         </div>
       </div>
     ))}
@@ -509,23 +506,23 @@ function HomeScreen2() {
 
 
 
-<div className='w-full bg-gray-200 '>
-<div className="container text-black p-4 relative ">
+<div className=' bg-gray-200 flex justify-center mx-auto '>
+<div className="container text-black p-4 flex justify-center">
 <section className=" py-8 ">
-<div className="container relative mx-32 ">
-<div className="grid grid-cols-1 md:grid-cols-3 gap-2 relative  ">
+<div className="container relative  ">
+<div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2 relative w-full ">
 
 <div className="col-md-4  border-2  rounded-xl relative  mr-5 p-14 pr-10 bg-white transition-transform duration-300 ease-in-out transform hover:-translate-y-3">
-<div className=" dark-price ">
+
 <div className="relative ">
 <div className=" text-5xl ">
-<h3 className="font-weight-extrabold ">
+
 
 <span className=" text-gray-400 text-xl">$</span>
     <span className=" text-6xl">49</span>
 
     <span className=" text-gray-400 text-xl">$</span>
-    <span className=" text-4xl text-gray-400">149</span></h3>
+    <span className=" text-4xl text-gray-400">149</span>
 
 
         </div>
@@ -580,13 +577,15 @@ function HomeScreen2() {
 </li>
 </ul>
 </div>
-<div className=" border-dashed border-2 border-gray-600 rounded-full hover:bg-pink-700 hover:text-white flex justify-center items-center h-16 w-72">
-<a className=" items-center" href="#">
-<FontAwesomeIcon icon={faBasketShopping}/> Purchase Now
-</a>
+<div className="flex justify-center">
+  <div className="border-dashed border-2 border-gray-600 rounded-full hover:bg-pink-700 hover:text-white flex justify-center items-center h-16 w-72 mr-1 flex-shrink-0 mx-auto overflow-hidden">
+    <a className="Goodup-price-btn" href="#">
+      <FontAwesomeIcon icon={faBasketShopping}/> Purchase Now
+    </a>
+  </div>
 </div>
     </div>
-  </div>
+
 
   <div className="col-span-1 md:col-span-1 border-2  rounded-xl border-gray-100 relative p-14 mr-5 bg-white text-gray-600 transition-transform duration-300 ease-in-out transform hover:-translate-y-3">
 <div className="Goodup-price-wrap dark-price">
@@ -652,10 +651,12 @@ function HomeScreen2() {
 </li>
 </ul>
 </div>
-<div className=" border-dashed border-2 border-gray-600 rounded-full bg-pink-700 text-white flex justify-center items-center h-16 w-72">
-<a className="Goodup-price-btn items-center" href="#">
-<FontAwesomeIcon icon={faBasketShopping}/> Purchase Now
-</a>
+<div className="flex justify-center">
+  <div className="border-dashed border-2 border-gray-600 rounded-full bg-pink-700 text-white flex justify-center items-center h-16 w-72 flex-shrink-0 mx-auto mr-1 overflow-hidden">
+    <a className="Goodup-price-btn" href="#">
+      <FontAwesomeIcon icon={faBasketShopping}/> Purchase Now
+    </a>
+  </div>
 </div>
     </div>
   </div>
@@ -725,10 +726,12 @@ function HomeScreen2() {
 </li>
 </ul>
 </div>
-<div className="  border-dashed border-2 border-gray-600 rounded-full hover:bg-pink-700 hover:text-white flex justify-center items-center h-16 w-72">
-<a className="Goodup-price-btn " href="#">
-<FontAwesomeIcon icon={faBasketShopping}/> Purchase Now
-</a>
+<div className="flex justify-center">
+  <div className="border-dashed border-2 border-gray-600 rounded-full hover:bg-pink-700 hover:text-white flex justify-center items-center mr-1 h-16 w-72 flex-shrink-0 mx-auto overflow-hidden">
+    <a className="Goodup-price-btn" href="#">
+      <FontAwesomeIcon icon={faBasketShopping}/> Purchase Now
+    </a>
+  </div>
 </div>
     </div>
   </div>
@@ -742,9 +745,8 @@ function HomeScreen2() {
 
 <div className="bg-green-900 relative h-100">
   <img src="/images/landing-bg.png" alt="landing" className="absolute h-100 bg-green-900 w-full h-full object-cover z-20" />
-
   <div className="container py-3 relative mt-10 z-20">
-    <div className="row justify-center">
+    <div className="row justify-center mx-2">
       <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
         <div className="sec_title relative text-center mb-5">
           <h6 className="text-white relative mt-32 text-xl">Subscribe Now</h6>
@@ -752,25 +754,21 @@ function HomeScreen2() {
         </div>
       </div>
     </div>
-
-    <div className="row items-center justify-center relative mt-16 mb-24 rowjustify-center">
-      <div className="xl:col-7 col-lg-10 col-md-12 col-sm-12 col-12">
-        <form className="bg-white rounded-md p-1 w-1/2 relative mx-auto flex justify-between">
-          <div className="w-full sm:w-3/4">
-            <input type="text" className="w-full text-white py-6 px-2" placeholder="Enter Your Email Address" />
-          </div>
-          <div className="w-full sm:w-1/4 items-right relative top-20 m-5 left-2">
-            <button className="bg-pink-600 h-20 w-32 bottom-12 m-2 text-white font-bold py-2 px-4 rounded-md absolute left-16" type="button">
-              Search
-              <div className='text-white-500'><FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-            </button>
-          </div>
-        </form>
-      </div>
+    <div className="relative items-center flex justify-center my-24 mr-2">
+      <form className="bg-white rounded-md p-1 md:w-1/2 sm:w-2/4 relative flex justify-between">
+        <div className="w-full relative">
+          <input type="text" className="sm:w-72 lg:w-full text-white py-6 px-2" placeholder="Enter Your Email Address" />
+        </div>
+        <div className="w-full sm:w-1/4 relative bottom-1 ">
+          <button className="bg-pink-600 h-20 md:w-48 sm:w-32 text-white font-bold  py-8  rounded-r-md absolute pl-4 ">
+            Search
+            <span className="text-white-500 relative ml-2"><FontAwesomeIcon icon={faMagnifyingGlass} /></span>
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
-
 
 
 <section className="space">
@@ -829,6 +827,7 @@ function HomeScreen2() {
   </div>
 </section>
 
+</div>
 </div>
      </>
      )
