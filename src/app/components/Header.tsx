@@ -63,7 +63,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`bg-white-100 text-black h-20 relative  ${menuOpen ? 'left-0 ' : 'mx-auto'}`}> {menuOpen && (
+    <header className={`bg-white text-black h-20 top-0 z-50 w-full sticky relative   ${menuOpen ? 'left-0 ' : 'mx-auto'}`}> {menuOpen && (
       <div
         className="absolute left-0 sm:ml-8   h-screen w-screen bg-white-600 z-20"
         onClick={toggleMenu}
